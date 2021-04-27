@@ -19,9 +19,5 @@ jobs:
           git fetch origin staging
           git checkout staging
 
-          git pull origin main
-          git checkout --ours -- .
-          git add .
-          git commit -m 'resolved with --ours'
-
-          git push origin staging -f
+          git pull -r origin main
+          git push -f origin staging
