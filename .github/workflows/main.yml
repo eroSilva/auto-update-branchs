@@ -13,12 +13,13 @@ jobs:
       - uses: actions/checkout@v2
       - name: Fetch main branches
         run: |
-          git config user.email "auto-update-branches-bot@github.com"
-          git config user.name "Auto Update Branchs Bot"
+          git config --global user.email "auto-update-branches-bot@github.com"
+          git config --global user.name "Auto Update Branchs Bot"
 
           git fetch origin main
           git fetch origin staging
           git fetch origin dev
+
           git checkout staging
           git merge main
 
