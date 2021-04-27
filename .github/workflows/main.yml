@@ -15,7 +15,7 @@ jobs:
           ref: staging
       - name: Update staging
         run: |
-          git pull --rabase origin main
+          git pull -r origin main
           git push origin staging
 
       - uses: actions/checkout@v2
