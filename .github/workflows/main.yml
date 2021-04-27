@@ -15,13 +15,15 @@ jobs:
           ref: staging
       - name: Update staging
         run: |
-          git config user.email "auto-update-branches-bot@github.com"
-          git config user.name "Auto Update Branchs Bot"
-          
-          git pull origin staging
-          git pull --rebase origin main
+          git remote show origin
 
 
+
+# git config user.email "auto-update-branches-bot@github.com"
+# git config user.name "Auto Update Branchs Bot"
+
+# git pull origin staging
+# git pull --rebase origin main
 
 # echo "${{ github.ref }}"
 # echo "${{ github.sha }}"
