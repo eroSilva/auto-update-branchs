@@ -15,25 +15,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Update staging
 
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
         with:
           ref: staging
 
+      - name: Update staging
         run: |
           git pull origin main
           git push origin staging
 
-      - name: Update dev
 
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
         with:
           ref: dev
 
-        run: |
-          git pull origin main
-          git push origin dev
+        - name: Update dev
+          run: |
+            git pull origin main
+            git push origin dev
 
 
   
