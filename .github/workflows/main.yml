@@ -18,3 +18,13 @@ jobs:
         run: |
           git pull origin main
           git push origin staging
+
+      - uses: actions/checkout@v2
+        with:
+          ref: main
+
+      - name: Reset dev
+        run: |
+          git push origin :dev
+          git checkout -b dev
+          git push origin dev
