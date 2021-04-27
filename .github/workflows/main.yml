@@ -16,12 +16,11 @@ jobs:
 
     steps:
       - name: Update staging branch
-        uses: actions/checkout@v2
-
+      - uses: actions/checkout@v2
+        
         with:
           ref: staging
 
-        name: Update staging
         run: |
           git pull origin main
           git push origin staging
