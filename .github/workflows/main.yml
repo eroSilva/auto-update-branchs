@@ -13,11 +13,18 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: main
-      - name: Update staging
+      - name: Fetch main branches
         run: |
           git fetch origin main
           git fetch origin staging
-          git remote show origin
+          git fetch origin dev
+
+      - uses: actions/checkout@v2
+        with:
+          ref: staging
+      - name: Update staging
+        run: |
+          git rebase --autosquash main
 
 
 
