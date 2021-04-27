@@ -20,8 +20,8 @@ jobs:
           git checkout staging
 
           git rebase -X theirs origin/main
-          
-          
+
+          git log
 
 
 
