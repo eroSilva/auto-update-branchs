@@ -17,7 +17,7 @@ jobs:
           git fetch origin staging
           git fetch origin dev
           git checkout staging
-          git branch
+          git rebase --autosquash main
 
 
 
