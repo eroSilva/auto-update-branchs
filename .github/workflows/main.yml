@@ -16,6 +16,7 @@ jobs:
           git fetch origin main
           git fetch origin staging
           git fetch origin dev
+          git branch
 
 
 
