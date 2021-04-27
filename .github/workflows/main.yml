@@ -17,6 +17,7 @@ jobs:
       - name: Update dev
         run: |
           git pull origin main
+          git push origin dev
 
 
       - uses: actions/checkout@v2
