@@ -27,5 +27,8 @@ jobs:
       - name: Update dev
         run: |
           git fetch origin main
-          git merge main -f
+          git checkout main
+          git branch -D dev
+          git checkout -b dev
+          git push origin :dev
           git push origin dev
