@@ -15,5 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Hello World
-      run: echo "${{github.event.ref}}"
+    - uses: actions/checkout@v2
+
+    - name: Hello World GIT
+      run: git log
