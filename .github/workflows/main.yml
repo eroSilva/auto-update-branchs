@@ -11,15 +11,27 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   updateBranch:
-    name: Update staging branch
+    name: Update Branchs
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-      with:
-        ref: staging
+      - name: Update staging
+      
+      - uses: actions/checkout@v2
+        with:
+          ref: staging
 
-    - name: Update staging branch
-      run: |
-        git pull origin main
-        git push origin staging
+        run: |
+          git pull origin main
+          git push origin staging
+
+
+      - name: Update Dev
+      
+      - uses: actions/checkout@v2
+        with:
+          ref: dev
+
+        run: |
+          git pull origin main
+          git push origin dev
