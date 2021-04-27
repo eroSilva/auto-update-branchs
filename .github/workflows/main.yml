@@ -15,7 +15,7 @@ jobs:
           ref: staging
       - name: Update staging
         run: |
-          git pull --ff-only origin main
+          git pull --no-rebase origin main
 
 
 
