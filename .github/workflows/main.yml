@@ -12,17 +12,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: main
-      - name: Fetch main branches
-        run: |
-          git fetch origin main
-          git fetch origin staging
-          git fetch origin dev
-
-      - uses: actions/checkout@v2
-        with:
-          ref: staging
-      - name: Update staging
+          ref: 
+            - main
+            - staging
+      - name: Fetch branches
         run: |
           git branch
 
