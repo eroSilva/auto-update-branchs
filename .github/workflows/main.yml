@@ -24,7 +24,7 @@ jobs:
           ref: staging
       - name: Update staging
         run: |
-          git rebase --autosquash main
+          git rebase --autosquash origin/main
 
 
 
