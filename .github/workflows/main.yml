@@ -15,7 +15,7 @@ jobs:
           ref: staging
       - name: Update staging
         run: |
-          git pull ${{ github.ref }}
+          git pull main
 
 
 
