@@ -21,16 +21,3 @@ jobs:
 
           git rebase -X theirs origin/main
           git push origin staging -f
-
-
-
-# git config user.email "auto-update-branches-bot@github.com" --allow-unrelated-histories
-# git config user.name "Auto Update Branchs Bot"
-
-# git pull origin staging
-# git pull --rebase origin main
-
-# echo "${{ github.ref }}"
-# echo "${{ github.sha }}"
-# echo "${{ github.head_ref }}"
-# echo "${{ github.base_ref }}"
