@@ -15,7 +15,7 @@ jobs:
           ref: staging
       - name: Update staging
         run: |
-          git pull main
+          git pull origin main
 
 
 
