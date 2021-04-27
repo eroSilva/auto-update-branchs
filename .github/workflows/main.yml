@@ -15,4 +15,7 @@ jobs:
           ref: staging
       - name: Update staging
         run: |
-          echo "${{ github }}"
+          echo "${{ github.ref }}"
+          echo "${{ github.sha }}"
+          echo "${{ github.head_ref }}"
+          echo "${{ github.base_ref }}"
