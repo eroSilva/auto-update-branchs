@@ -16,4 +16,8 @@ jobs:
           git config --global user.email "auto-update-branches-bot@github.com"
           git config --global user.name "Auto Update Branchs Bot"
 
-          
+          git fetch origin staging
+          git checkout staging
+
+          git rebase -X ours origin/main
+          git push origin staging -f  
