@@ -17,9 +17,11 @@ jobs:
           git config --global user.name "Auto Update Branchs Bot"
 
           git fetch origin staging
-
           git checkout staging
+
           git rebase origin/main
+          git add .
+          git rebase --continue
           
           
 
