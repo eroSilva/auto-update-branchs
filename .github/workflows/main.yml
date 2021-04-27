@@ -19,5 +19,5 @@ jobs:
           git fetch origin staging
           git checkout staging
 
-          git pull -r origin main
+          git pull -r -X ours origin main
           git push -f origin staging
