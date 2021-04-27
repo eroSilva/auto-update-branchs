@@ -13,15 +13,10 @@ jobs:
       - uses: actions/checkout@v2
       - name: Fetch main branches
         run: |
-          git config --global user.email "auto-update-branches-bot@github.com"
-          git config --global user.name "Auto Update Branchs Bot"
-
-          git fetch origin main
           git fetch origin staging
-          git fetch origin dev
 
           git checkout staging
-          git merge main --no-edit --allow-unrelated-histories
+          git pull origin main --no-edit --allow-unrelated-histories
           git commit -am "Auto Merge"
           git log
 
