@@ -16,6 +16,7 @@ jobs:
 
       - name: Update dev
         run: |
+          git branch
           git pull origin main
           git push origin dev
 
@@ -26,4 +27,4 @@ jobs:
 
       - name: Update staging
         run: |
-          git pull origin main
+          git branch
