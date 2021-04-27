@@ -15,14 +15,5 @@ jobs:
           ref: staging
       - name: Update staging
         run: |
-          git pull -r origin main
-          git push -f origin staging
-
-      - uses: actions/checkout@v2
-        with:
-          ref: main
-      - name: Reset dev
-        run: |
-          git push origin :dev
-          git checkout -b dev
-          git push origin dev
+          git fetch origin main
+          git rebase --autosquash main
