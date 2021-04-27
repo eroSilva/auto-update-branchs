@@ -27,3 +27,4 @@ jobs:
       - name: Update staging
         run: |
           git pull origin main
+          git push origin staging
