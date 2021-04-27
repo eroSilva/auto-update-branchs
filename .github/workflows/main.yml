@@ -21,9 +21,7 @@ jobs:
           git fetch origin dev
 
           git checkout staging
-          git merge main --no-commit --allow-unrelated-histories
-          git add .
-          git commit -m "[BOT] Update staging with main"
+          git merge main -s recursive --allow-unrelated-histories
           git push origin staging
 
 
