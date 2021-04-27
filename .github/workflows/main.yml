@@ -12,23 +12,17 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: staging
+          ref: main
 
       - name: Update staging
         run: |
+          git fetch origin staging
+          git fetch origin dev
+
+          git checkout staging
           git pull origin main
           git push origin staging
 
-
-      - uses: actions/checkout@v2
-        with:
-          ref: dev
-
-      - name: Update dev
-        run: |
-          git fetch origin main
-          git checkout main
-          git branch -D dev
-          git checkout -b dev
-          git push origin :dev
+          git checkout dev
+          git pull origin main
           git push origin dev
