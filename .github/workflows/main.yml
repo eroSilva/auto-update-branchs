@@ -21,7 +21,9 @@ jobs:
           git fetch origin dev
 
           git checkout staging
-          git merge main --no-edit --allow-unrelated-histories
+          git merge main --allow-unrelated-histories
+          git add .
+          git commit -m "Auto merge"
           git push origin staging
 
 
