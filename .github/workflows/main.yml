@@ -12,11 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: main
+          ref: staging
 
       - name: Update staging
         run: |
-          git fetch origin staging
-          git checkout staging
-          git merge main
+          git pull origin main
           git push origin staging
