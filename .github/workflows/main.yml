@@ -31,7 +31,7 @@ jobs:
 
       - name: Update dev
         run: |
-          git pull origin main --allow-unrelated-histories
+          git pull origin main
 
 
   
