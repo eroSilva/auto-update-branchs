@@ -1,4 +1,4 @@
-name: Update prod branch on release
+name: Update Dev and Staging branches
 
 on:
   push:
@@ -6,18 +6,18 @@ on:
 
 jobs:
   updateBranches:
-    name: Update Branches
+    name: Update branches
     runs-on: ubuntu-latest
 
     steps:
-      # - uses: actions/checkout@v2
-      #   with:
-      #     ref: staging
+      - uses: actions/checkout@v2
+        with:
+          ref: staging
 
-      # - name: Update staging
-      #   run: |
-      #     git pull origin main
-      #     git push origin staging
+      - name: Update staging
+        run: |
+          git pull origin main
+          git push origin staging
 
       - uses: actions/checkout@v2
         with:
@@ -25,4 +25,4 @@ jobs:
 
       - name: Update dev
         run: |
-          git pull origin main
+          git branch
