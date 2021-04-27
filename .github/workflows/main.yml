@@ -21,11 +21,14 @@ jobs:
           git fetch origin dev
 
           git checkout staging
-          git merge main --allow-unrelated-histories
+          git merge main --no-commit
+          git add .
+          git commit -m "[BOT] Update staging with main"
+          git push origin staging
 
 
 
-# git config user.email "auto-update-branches-bot@github.com"
+# git config user.email "auto-update-branches-bot@github.com" --allow-unrelated-histories
 # git config user.name "Auto Update Branchs Bot"
 
 # git pull origin staging
