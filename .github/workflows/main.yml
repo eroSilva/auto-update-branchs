@@ -31,7 +31,7 @@ jobs:
 
       - name: Update dev
         run: |
-          git pull origin main
+          git pull origin main --ff-only
 
 
   
