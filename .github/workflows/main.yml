@@ -12,9 +12,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: staging
+          ref: main
       - name: Update staging
         run: |
+          git fetch origin main
+          git fetch origin staging
           git remote show origin
 
 
