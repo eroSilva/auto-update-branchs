@@ -15,7 +15,10 @@ jobs:
           ref: staging
       - name: Update staging
         run: |
-          git pull origin main --allow-unrelated-histories
+          git config user.email "auto-update-branches-bot@github.com"
+          git config user.name "Auto Update Branchs Bot"
+
+          git pull origin main
 
 
 
