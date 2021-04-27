@@ -16,8 +16,8 @@ jobs:
 
     steps:
       - name: Update staging
-      
-      - uses: actions/checkout@v2
+
+        uses: actions/checkout@v2
         with:
           ref: staging
 
@@ -25,13 +25,15 @@ jobs:
           git pull origin main
           git push origin staging
 
+      - name: Update dev
 
-      - name: Update Dev
-      
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
         with:
           ref: dev
 
         run: |
           git pull origin main
           git push origin dev
+
+
+  
