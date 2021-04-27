@@ -1,17 +1,11 @@
-name: Update prod branch on release
+name: Update Dev and Staging Branches
 
-# Controls when the action will run. 
 on:
   push:
     branches: [ main ]
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  updateBranch:
-    name: Update Branchs
+  updateBranches:
     runs-on: ubuntu-latest
 
     steps:
@@ -24,7 +18,6 @@ jobs:
           git pull origin main
           git push origin staging
 
-
       - uses: actions/checkout@v2
         with:
           ref: dev
@@ -32,6 +25,3 @@ jobs:
       - name: Update dev
         run: |
           git pull origin main
-
-
-  
