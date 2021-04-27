@@ -19,11 +19,10 @@ jobs:
           git pull origin main
 
 
-      # - uses: actions/checkout@v2
-      #   with:
-      #     ref: staging
+      - uses: actions/checkout@v2
+        with:
+          ref: staging
 
-      # - name: Update staging
-      #   run: |
-      #     git pull origin main
-      #     git push origin staging
+      - name: Update staging
+        run: |
+          git pull origin main
