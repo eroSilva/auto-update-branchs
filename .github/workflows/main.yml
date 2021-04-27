@@ -17,13 +17,8 @@ jobs:
       - name: Update staging
         run: |
           git fetch origin main
-          git fetch origin staging
-          git fetch origin dev
 
+          git fetch origin staging
           git checkout staging
           git merge main
           git push origin staging
-
-          git checkout dev
-          git pull merge main
-          git push origin dev
