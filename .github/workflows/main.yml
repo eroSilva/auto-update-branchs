@@ -19,9 +19,7 @@ jobs:
           git fetch origin staging
           git checkout staging
 
-          git rebase origin/main
-          git add .
-          git rebase --continue
+          git rebase -X theirs origin/main
           
           
 
