@@ -21,7 +21,7 @@ jobs:
           git fetch origin dev
 
           git checkout staging
-          git merge main -s recursive --allow-unrelated-histories
+          git merge main --no-edit --allow-unrelated-histories
           git push origin staging
 
 
