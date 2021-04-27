@@ -17,8 +17,9 @@ jobs:
         run: |
           git config user.email "auto-update-branches-bot@github.com"
           git config user.name "Auto Update Branchs Bot"
-
-          git merge origin/main
+          
+          git pull origin staging
+          git pull origin main
 
 
 
