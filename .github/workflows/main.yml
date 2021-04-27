@@ -16,9 +16,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with:
+        ref: staging
 
-    - name: Hello World GIT
+    - name: Update staging branch
       run: |
-        git log
-        git push origin staging 
-        git push origin dev
+        git pull origin main
+        git push origin staging
