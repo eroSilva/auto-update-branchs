@@ -15,4 +15,4 @@ jobs:
           ref: staging
       - name: Update staging
         run: |
-          git fetch origin main
+          git rebase --autosquash origin/main
