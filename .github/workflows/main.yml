@@ -13,5 +13,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - name: Update dev branch
         run: |
           git push origin :lorem
