@@ -1,4 +1,4 @@
-name: Update Dev and Staging branches
+name: Update Dev branch
 
 on:
   push:
@@ -8,18 +8,10 @@ on:
 
 jobs:
   updateBranches:
-    name: Update branches
+    name: Update branch
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
-      - name: Fetch main branches
         run: |
-          git config --global user.email "auto-update-branches-bot@github.com"
-          git config --global user.name "Auto Update Branchs Bot"
-
-          git fetch origin staging
-          git checkout staging
-
-          git pull -r -X ours origin main
-          git push -f origin staging
+          git push origin :lorem
