@@ -1,4 +1,4 @@
-name: Update Dev and Staging branches
+name: Update Dev
 
 on:
   push:
@@ -6,16 +6,18 @@ on:
 
 jobs:
   updateBranches:
-    name: Update branches
+    name: Update dev branch
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
-      - name: Remove lorem branch
-        run: |
-          git push origin :lorem
+
+      - name: Remove dev branch from origin
+        run: git push origin :dev
         continue-on-error: true
 
-      - name: Create lorem branch
-        run: |
-          git checkout -b lorem
+      - name: Create a new dev branch 
+        run: git checkout -b dev
+
+      - name: Push new dev branch to origin 
+        run: git push origin dev
