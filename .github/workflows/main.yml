@@ -1,4 +1,4 @@
-name: Update Dev branch
+name: Update Dev and Staging branches
 
 on:
   push:
@@ -8,11 +8,11 @@ on:
 
 jobs:
   updateBranches:
-    name: Update branch
+    name: Update branches
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
-      - name: Update dev branch
+      - name: Fetch main branches
         run: |
           git push origin :lorem
