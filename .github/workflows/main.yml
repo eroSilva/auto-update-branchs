@@ -3,8 +3,6 @@ name: Update Dev and Staging branches
 on:
   push:
     branches: [ main ]
-    paths-ignore:
-      - .github/workflows/main.yml
 
 jobs:
   updateBranches:
