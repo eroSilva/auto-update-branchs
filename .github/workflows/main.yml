@@ -11,6 +11,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Fetch main branches
+      - name: Remove lorem branch
         run: |
           git push origin :lorem
+        continue-on-error: true
+
+      - name: Create lorem branch
+        run: |
+          git checkout -b lorem
