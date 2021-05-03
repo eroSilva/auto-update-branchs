@@ -1,0 +1,23 @@
+name: Update Dev
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  updateBranches:
+    name: Update dev branch
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Remove dev branch from origin
+        run: git push origin :dev
+        continue-on-error: true
+
+      - name: Create a new dev branch 
+        run: git checkout -b dev
+
+      - name: Push new dev branch to origin 
+        run: git push origin dev
